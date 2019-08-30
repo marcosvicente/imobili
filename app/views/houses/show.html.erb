@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @house.address %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @house.cep %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @house.size %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @house.rooms %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @house.bathrooms %>
+</p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @house.parking %>
+</p>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>
