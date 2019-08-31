@@ -11,6 +11,8 @@
       <th>Rooms</th>
       <th>Bathrooms</th>
       <th>Parking</th>
+      <th>Sell</th>
+      <th>Rent</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +26,8 @@
         <td><%= house.rooms %></td>
         <td><%= house.bathrooms %></td>
         <td><%= house.parking %></td>
+        <td><%= house.sell %></td>
+        <td><%= house.rent %></td>
         <td><%= link_to 'Show', house %></td>
         <td><%= link_to 'Edit', edit_house_path(house) %></td>
         <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>

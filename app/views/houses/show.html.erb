@@ -30,5 +30,15 @@
   <%= @house.parking %>
 </p>
 
+<p>
+  <strong>Sell:</strong>
+  <%= @house.sell %>
+</p>
+
+<p>
+  <strong>Rent:</strong>
+  <%= @house.rent %>
+</p>
+
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>
