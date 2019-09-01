@@ -19,6 +19,7 @@ RSpec.describe House, type: :model do
       it{is_expected.to validate_presence_of(:rooms)}
       it{is_expected.to validate_presence_of(:bathrooms)}
       it{is_expected.to validate_presence_of(:parking)}
+      it{is_expected.to validate_presence_of(:city)}
     end
 
     describe "numericality" do

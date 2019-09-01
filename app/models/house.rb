@@ -5,4 +5,5 @@ class House < ApplicationRecord
   validates :rooms, presence: true, numericality: { only_integer: true }
   validates :bathrooms, presence: true,  numericality: { only_integer: true }
   validates :parking, presence: true, numericality: { only_integer: true }
+  validates :city, presence: true
 end

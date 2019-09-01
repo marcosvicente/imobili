@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :house do
-    address {FFaker::AddressBR.street_address }
-    cep {FFaker::AddressBR.zip_code }
+    address { FFaker::AddressBR.street_address }
+    cep { FFaker::AddressBR.zip_code }
+    city { FFaker::AddressBR.city }
     size { rand(42..500) }
     rooms { rand(1..3) }
     bathrooms { rand(1..3) }
