@@ -12,11 +12,7 @@ RSpec.describe Info, type: :model do
   end
 
   context "Validations" do
-    describe "presence_of?" do
-      it{is_expected.to validate_presence_of(:address)}
-    end
-
-    describe "numericality" do
+        describe "numericality" do
       it{is_expected.to validate_numericality_of(:phone).only_integer}
     end
   end

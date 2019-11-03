@@ -14,12 +14,7 @@ class InfosController < ApplicationController
 
   # GET /infos/new
   def new
-    unless Info.exist?
-      @info = Info.new
-    else
-      # redirect to edit
-    end
-
+    @info = Info.new
   end
 
   # GET /infos/1/edit
