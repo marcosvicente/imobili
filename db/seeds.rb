@@ -1,7 +1,9 @@
 require 'ffaker'
 require 'pry'
 
-for i in 1..100 do
+
+# run to insert from House 
+for i in 1..50 do
   House.create(
     address: FFaker::AddressBR.street,
     cep: FFaker::AddressBR.zip_code,
@@ -17,3 +19,16 @@ for i in 1..100 do
   puts "Create House - #{House.count}"
 end
 
+# run to insert from Info
+Info.create(
+  address: FFaker::AddressBR.street,
+  phone: FFaker::PhoneNumberBR.phone_number.gsub(/-/, '').gsub(/ /, ''),
+  email: FFaker::Internet.email,
+  openCloseCompany: "Aberto das 8h até as 18h de segunda a sabado",
+  facebook: "https://facebook.com",
+  instagram: "https://instagram.com",
+  twitter: "https://twitter.com",
+  linkedin: "https://linkedin.com"
+)
+
+puts "Create ImobiliInfo - #{Info.count}"

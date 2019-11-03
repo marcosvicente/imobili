@@ -8,28 +8,38 @@
                 <p>Lorem ipsum dolo sit azmet, consecter dipise consult  elit. Maecenas mamus antesme non anean a dolor sample tempor nuncest erat.</p>
 
                 <div class="social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <%= link_to(@info.facebook) do %>
+                        <i class="fa fa-facebook"></i>
+                    <% end %>
+
+                    <%= link_to(@info.twitter) do %>
+                        <i class="fa fa-twitter"></i>
+                    <% end %>
+
+                    <%= link_to(@info.instagram) do %>
+                        <i class="fa fa-instagram"></i>
+                    <% end %>
+
+                    <%= link_to(@info.linkedin) do %>
+                        <i class="fa fa-linkedin"></i>
+                    <% end %>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-widget">
                 <div class="contact-widget">
-                    <h5 class="fw-title">CONTACT US</h5>
-                    <p><i class="fa fa-map-marker"></i>3711-2880 Nulla St, Mankato, Mississippi </p>
-                    <p><i class="fa fa-phone"></i>(+88) 666 121 4321</p>
-                    <p><i class="fa fa-envelope"></i>info.leramiz@colorlib.com</p>
-                    <p><i class="fa fa-clock-o"></i>Mon - Sat, 08 AM - 06 PM</p>
+                    <h5 class="fw-title">Contate-nos</h5>
+                    <p><i class="fa fa-map-marker"></i><%= @info.address %> </p>
+                    <p><i class="fa fa-phone"></i><%= number_to_phone(@info.phone, pattern: /(\d{2})(\d{4,5})(\d{4})$/) %></p>
+                    <p><i class="fa fa-envelope"></i><%= @info.email %></p>
+                    <p><i class="fa fa-clock-o"></i><%= @info.openCloseCompany %></p>
                 </div>
 
             </div>
 
             <div class="col-lg-3 col-md-6 footer-widget">
                 <div class="double-menu-widget">
-                    <h5 class="fw-title">POPULAR PLACES</h5>
+                    <h5 class="fw-title">IMOVEIS POPULARES</h5>
                     <ul>
                         <li>
                             <% @houses_premium.each do |p| %>

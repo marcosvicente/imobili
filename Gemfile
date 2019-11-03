@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -56,7 +57,6 @@ end
 group :test do
   gem 'webdrivers'
   gem 'chromedriver-helper'
-  gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov'

@@ -9,7 +9,7 @@ FactoryBot.define do
     parking { rand(1..3) }
     sell { rand(500.00..5000.00) }
     rent { rand(200000.00...200000.00) }
-    premium { FFaker::Boolean.random }
+    premium { true }
   end
 end
 

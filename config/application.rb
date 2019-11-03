@@ -10,5 +10,10 @@ module Imobili
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+
+    # Config to generators
+    config.generators do |g|
+      g.scaffold_stylesheet false
+    end
   end
 end
