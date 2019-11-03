@@ -1,5 +1,6 @@
-
 require 'ffaker'
+require 'pry'
+
 for i in 1..100 do
   House.create(
     address: FFaker::AddressBR.street,
@@ -10,6 +11,9 @@ for i in 1..100 do
     parking: rand(1..3),
     sell: rand(500.00..5000.00),
     rent: rand(200000.00...200000.00),
-    city: FFaker::AddressBR.city 
+    city: FFaker::AddressBR.city,
+    premium: FFaker::Boolean.random
   )
+  puts "Create House - #{House.count}"
 end
+

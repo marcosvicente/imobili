@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_01_015750) do
+ActiveRecord::Schema.define(version: 2019_11_03_000048) do
 
   create_table "houses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "address"
-    t.string "cep"
-    t.integer "size"
-    t.integer "rooms"
-    t.integer "bathrooms"
-    t.integer "parking"
+    t.string "address", null: false
+    t.string "cep", null: false
+    t.integer "size", null: false
+    t.integer "rooms", null: false
+    t.integer "bathrooms", null: false
+    t.integer "parking", null: false
     t.decimal "sell", precision: 10
     t.decimal "rent", precision: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "city"
+    t.string "city", null: false
+    t.boolean "premium", null: false
   end
 
 end

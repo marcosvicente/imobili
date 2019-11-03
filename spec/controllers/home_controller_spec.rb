@@ -7,6 +7,7 @@ RSpec.describe HomeController, type: :controller do
       get :index
       expect(response).to have_http_status(:success)
     end
-  end
+
+ end
 
 end
